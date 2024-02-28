@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@*RENDERIZZARE LISTA PRODOTTI*@
+
+@*Task da fare: 
+    -Popolare la lista con 3 prodotti hardcodati (DONE)
+    -Creare un form per inserire prodotti (DONE)
+    -Creare layout grafico per renderizzare prodotti della lista (immagine copertina, nome, prezzo) (DONE)
+    -Aggiungere dettaglio prodotto al clic su un prodotto
+    -Aggiungere alla home elimina prodotto senza togliere dal database (softDelete)
+    -HardDelete funzione facoltativa
+    -Creare form per modifica prodotti a cui accedo dai dettagli
+    -Recuperare dati per form modiica precompilato
+    -Css
+*@
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+     <div class="row">
+            @foreach(var product in Model)
+            {
+                <div class="card col-4">
+                    <img class="card-img-top" src="@product.CoverImg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name <span class="badge bg-success">@product.Price $</span></h5>
+                        <p class="card-text">@product.Description</p>
+                        <a href="#" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            }
+        </div>
+    
+</div>
