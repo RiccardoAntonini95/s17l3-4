@@ -23,9 +23,9 @@
                 <div class="card col-4">
                     <img class="card-img-top" src="@product.CoverImg" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">@product.Name <span class="badge bg-success">@product.Price $</span></h5>
-                        <p class="card-text">@product.Description</p>
-                        <a href="#" class="btn btn-primary">Details</a>
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text"><span class="badge bg-success">@product.Price $</span></p>
+                        <a class="btn btn-primary" asp-controller="Details" asp-action="Index" asp-route-id="@product.Id">Details</a>
                     </div>
                 </div>
             }

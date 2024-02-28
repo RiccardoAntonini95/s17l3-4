@@ -21,5 +21,10 @@
             _productsList.Add(product);
             return product;
         }
+
+        public static Product GetById(int id)
+        {
+            return _productsList[id - 1];
+        }
     }
 }
