@@ -9,4 +9,6 @@
         public string CoverImg { get; set; }
 
     }
+
+
 }

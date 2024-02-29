@@ -3,32 +3,31 @@
 }
 @*RENDERIZZARE LISTA PRODOTTI*@
 
-@*Task da fare: 
-    -Popolare la lista con 3 prodotti hardcodati (DONE)
-    -Creare un form per inserire prodotti (DONE)
-    -Creare layout grafico per renderizzare prodotti della lista (immagine copertina, nome, prezzo) (DONE)
-    -Aggiungere dettaglio prodotto al clic su un prodotto
-    -Aggiungere alla home elimina prodotto senza togliere dal database (softDelete)
-    -HardDelete funzione facoltativa
-    -Creare form per modifica prodotti a cui accedo dai dettagli
-    -Recuperare dati per form modiica precompilato
-    -Css
+@*   NUOVE TASK: 
+    -Creare il database 
+    -Collegare il database
+    -Aggiungere input file al form aggiungi
+    -Collegare il form aggiungi al database
+    _softDelete senza togliere dal database
+    -HardDelete classico
+    -Form modifica dati del db con dati precompilati
+    -css
 *@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
      <div class="row">
-            @foreach(var product in Model)
+             @foreach(var product in Model)
             {
                 <div class="card col-4">
-                    <img class="card-img-top" src="@product.CoverImg" alt="Card image cap">
+                    <img class="card-img-top" src="/uploads/@product.CoverImg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
                         <p class="card-text"><span class="badge bg-success">@product.Price $</span></p>
                         <a class="btn btn-primary" asp-controller="Details" asp-action="Index" asp-route-id="@product.Id">Details</a>
                     </div>
                 </div>
-            }
+            } 
         </div>
     
 </div>
