@@ -11,6 +11,6 @@
         <li>Price: @Model.Price $</li>
         <li>Description: @Model.Description</li>
     </ul>
-    <button class="btn btn-warning">Edit</button>
+    <a class="btn btn-warning" asp-controller="EditProduct" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
     <button class="btn btn-danger">Delete</button>
 </div>
