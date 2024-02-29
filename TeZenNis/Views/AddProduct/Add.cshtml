@@ -4,7 +4,7 @@
 @{
 }
 
-<form class="text-center" method="post" asp-controller="AddProduct" asp-action="Add">
+<form class="text-center" method="post" asp-controller="AddProduct" asp-action="Add" enctype="multipart/form-data">
     <fieldset>
         <legend>New Product:</legend>
         <label for="Name">Name:</label>
@@ -19,8 +19,8 @@
         <input type="text" id="Description" name="Description">
         <br>
         <br>
-        <label for="CoverImg">Url Img:</label>
-        <input type="text" id="CoverImg" name="CoverImg">
+        <label for="CoverImg">Product Img:</label>
+        <input type="file" id="CoverImg" name="CoverImg">
         <br>
         <br>
         <button type="submit" value="Submit">Add Product</button>
