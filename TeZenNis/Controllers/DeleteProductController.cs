@@ -28,7 +28,7 @@ namespace TeZenNis.Controllers
             }
             catch (Exception ex)
             {
-
+               return RedirectToAction("Index", "Home");
             }
             finally { conn.Close(); }
             return RedirectToAction("Index", "Home");
