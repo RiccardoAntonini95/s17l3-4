@@ -1,0 +1,10 @@
+﻿@{
+}
+@Model Product
+
+<h2>Sei sicuro di voler eliminare il prodotto @Model.Name ?</h2>
+
+<form asp-controller="DeleteProduct" asp-action="Delete" method="post">
+    <input type="hidden" id="@Model.Id" />
+    <button>Elimina</button>
+</form>

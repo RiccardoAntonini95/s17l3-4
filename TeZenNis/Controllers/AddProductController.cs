@@ -9,10 +9,6 @@ namespace TeZenNis.Controllers
     public class AddProductController : Controller
     {
         private string connString = "Server=HP-RIC\\SQLEXPRESS; Initial Catalog=TeZenNis; Integrated Security=true; TrustServerCertificate=True";
-        public IActionResult Index()
-        {
-            return View();
-        }
 
         public IActionResult Add()
         {
